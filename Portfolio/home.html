@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Project Hub</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1 class="title">
+                <img src="title.png" alt="Logo" class="logo"> Project Hub
+            </h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Explore our different websites:</h2>
+
+        <div class="project-grid">
+
+            <div class="project-card">
+                <img src="age\age_project_image.png" alt="Age Calculator Project" class="project-image">
+                <h3 class="project-title">Age Calculator Project</h3>
+                <p class="project-description">Calculate your age based on the input date.</p>
+                <p class="code-info">Code Info: <code>HTML, CSS, JAVASCRIPT</code></p>
+                <a href="./age" target="_blank" class="project-link">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <img src="color\color_project_image.png" alt="Color Flipper Project" class="project-image">
+                <h3 class="project-title">Color Flipper Project</h3>
+                <p class="project-description"> Color Flip through random colors with a click.</p>
+                <p class="code-info">Code Info: <code>HTML, CSS, JAVASCRIPT</code></p>
+                <a href="./color" target="_blank" class="project-link">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <img src="game\game_project_image.png" alt="Number Guessing Game Project" class="project-image">
+                <h3 class="project-title">Number Guessing Game Project</h3>
+                <p class="project-description">Guess the correct number within a specified range.</p>
+                <p class="code-info">Code Info: <code>HTML, CSS, JAVASCRIPT</code></p>
+                <a href="./game" target="_blank" class="project-link">View Project</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-container">
+        <div class="container">
+            <h3 class="section-title">Contact Us</h3>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" id="name" name="name" class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone" class="form-label">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" id="email" name="email" class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label for="message" class="form-label">Message:</label>
+                    <textarea id="message" name="message" rows="6" class="form-textarea"></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Website Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>

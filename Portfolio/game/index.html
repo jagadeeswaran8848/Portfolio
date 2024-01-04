@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUMBER GUESSING GAME</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <marquee><h3>THINK A NUMBER BETWEEN 1 - 10</h3></marquee>
+         <input type="text" placeholder="Enter number" id="guess"><br>
+         <button onclick="play()">Guess</button>
+         <p id="msg1">Number of guess : 0</p>
+         <p id="msg2">Guessed Number are : none</p>
+         <p id="msg3"></p>
+    </div>
+
+
+    
+    <script>
+        alert("WELCOME TO NUMBERS GUESSING GAME");
+        alert("ENJOY THIS GAME");
+        var msg1 = document.querySelector("#msg1");
+        var msg2 = document.querySelector("#msg2");
+        var msg3 = document.querySelector("#msg3");
+        var result = Math.floor(Math.random()*10) - 1;
+        var no_of_guesses = 0;
+        var guesses_num = [];
+
+        function play(){
+            var user_guess = document.querySelector("#guess").value;
+            if(user_guess < 1 || user_guess > 10){
+                alert("Please Enter number between 1 to 10")
+            }
+            else{
+                guesses_num.push(user_guess);
+                no_of_guesses = no_of_guesses + 1;
+                if(user_guess < result){
+                    msg1.textContent = "Your Guess Is Low";
+                    msg2.textContent = "Number Of Guesses : " + no_of_guesses;
+                    msg3.textContent = "Guessed Numbers are : " + guesses_num;
+                }
+                else if(user_guess > result){
+                    msg1.textContent = "Your Guess Is High";
+                    msg2.textContent = "Number Of Guesses : " + no_of_guesses;
+                    msg3.textContent = "Guessed Numbers are : " + guesses_num;
+                }
+                else if(user_guess == result){
+                    msg1.textContent = "YOU WON";
+                    msg2.textContent = "The Number Is : " + result;
+                    msg3.textContent = "You Guessed : " + no_of_guesses + " Guesses";
+                    alert("CONGRATULATIONS YOU WON THE GAME")
+                }
+            }
+        }
+    </script> 
+</body>
+</html>
